@@ -1,0 +1,13 @@
+.sermon__body {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  background-color: #f0f0f0;
+}
+
+.sermon__pagination {
+  display: grid;
+  place-items: center;
+}

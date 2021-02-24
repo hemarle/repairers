@@ -1,0 +1,16 @@
+.ash {
+  background: linear-gradient(to left, #8d98a3, #336690);
+  color: blue;
+}
+.btn-dangers {
+  color: blue;
+  background: linear-gradient(to right, white, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+  margin-bottom: -20px;
+}

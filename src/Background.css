@@ -1,0 +1,16 @@
+.background {
+  background-image: url("./images/couple.jpg");
+  background-size: cover;
+  height: 100vh;
+  /* background-color: black; */
+  /* background-blend-mode: luminosity; */
+
+  /* width: auto; */
+  /* margin-bottom: 20px; */
+  color: white;
+}
+.background__content {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}

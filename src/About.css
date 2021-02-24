@@ -1,0 +1,72 @@
+.about {
+  background-color: #f0f0f0;
+  color: #555555;
+  padding-top: 150px;
+  min-height: 100vh;
+}
+.about > h2 {
+  font-weight: 400;
+  font-size: 3em;
+  color: #555555;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 10px;
+  font-family: "arial, helvetica, sans-serif, avenir-next, superior, crisp noto sans regular, helvetica neue, crisp noto sans bold";
+  font: "superior";
+}
+.about > p {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: large;
+
+  font-family: "avenir-Next";
+}
+
+.about__body > h4 {
+  font-weight: 500;
+  font-size: 2.5em;
+
+  font-family: "arial, helvetica, sans-serif, avenir-next, superior, crisp noto sans regular, helvetica neue, crisp noto sans bold";
+  font: "arial";
+  margin-top: 70px;
+
+  margin-bottom: 10px;
+  color: #555555;
+  text-align: center;
+  line-height: 1.2;
+}
+.about__content {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about__c > h5 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5em;
+  font-family: "arial, helvetica, sans-serif, avenir-next, superior, crisp noto sans regular, helvetica neue, crisp noto sans bold";
+  margin: 0;
+}
+.about__c > hr {
+  padding: 0px;
+  border: 0.1px solid black;
+  margin: auto;
+  margin-top: 0px;
+}
+
+.about__c > p {
+  font-size: large;
+  font-family: "avenir-Next";
+}
+
+@media screen and (max-width: 400px) {
+  .about__c > hr {
+    width: 90%;
+  }
+  .about__c > p {
+    font-size: small;
+  }
+}
