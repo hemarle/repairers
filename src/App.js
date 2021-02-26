@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Navigation from "./Navigation";
 import Header from "./Header";
@@ -8,6 +7,7 @@ import Body from "./Body";
 import About from "./About";
 import Footer from "./Footer";
 import SermonPost from "./SermonPost";
+import AddPost from "./AddPost";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -30,10 +30,10 @@ function App() {
         <Navigation />
 
         <Switch>
-          <Route exact path="/">
-            <Redirect to="/home" />
+          <Route exact path="/home">
+            <Redirect to="/" />
           </Route>
-          <Route path="/home">
+          <Route exact path="/">
             <>
               <Background />
               <About />
@@ -55,6 +55,9 @@ function App() {
           </Route>
           <Route path="/sermons/:roomid">
             <SermonPost />
+          </Route>
+          <Route path="/admin">
+            <AddPost />
           </Route>
         </Switch>
 

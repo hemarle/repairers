@@ -6,7 +6,7 @@
 }
 
 .galleryContent__text {
-  /* width: 250px; */
+  width: 90%;
 }
 
 .galleryContent__text p {
@@ -16,8 +16,14 @@
   padding-bottom: 10px;
 }
 
-.galleryContent__text h3 {
+.galleryContent__text h5 {
   text-align: center;
   margin: 0;
   margin-bottom: 30px;
+  margin-top: 2px;
+
+  /* font-size: 10px; */
+}
+.galleryContent__text h5 span {
+  margin-left: 10px;
 }

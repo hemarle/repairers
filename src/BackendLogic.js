@@ -4,14 +4,20 @@ import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
 import Pusher from "pusher-js";
 function BackendLogic() {
-  const [{ SERMON }, dispatch] = useStateValue();
+  const [{ SERMON, GALLERY }, dispatch] = useStateValue();
 
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get("/api/v1/sermon");
+      const requestGallery = await axios.get("/api/v1/gallery");
+
       dispatch({
         type: actionTypes.SET_SERMON,
         SERMON: request.data,
+      });
+      dispatch({
+        type: actionTypes.SET_GALLERY,
+        GALLERY: requestGallery.data,
       });
     }
     fetchData();
@@ -26,7 +32,7 @@ function BackendLogic() {
     channel.bind("event", function ({ message }) {
       dispatch({
         type: actionTypes.SET_SERMON,
-        SERMON: [...SERMON, message],
+        SERMON: [message, ...SERMON],
       });
       // alert(JSON.stringify(message));
     });

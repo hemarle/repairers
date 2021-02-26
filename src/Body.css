@@ -3,6 +3,11 @@
   display: grid;
   place-content: center;
   background-color: #f0f0f0;
+
+  /* margin-bottom: 15vh; */
+
+  padding-top: 10vh;
+  padding-bottom: 15vh;
 }
 
 .body__main {
@@ -11,7 +16,8 @@
 }
 
 .body__sermon {
-  background-image: url("./images/imagebg.jpeg");
+  /* background-image: url("./images/imagebg.jpeg"); */
+  background: gray;
   border-radius: 10px;
   height: 450px;
   /* max-width: 8px; */
@@ -25,9 +31,10 @@
 }
 .body__image > img {
   border-radius: 20px;
-  margin-left: 20px;
+  margin-left: 11px;
   width: 90%;
   height: 200px;
+  padding-bottom: 10px;
 }
 .body__content {
 }
@@ -46,19 +53,23 @@
   margin-left: 20px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .body__image > img {
     /* margin-left: 0; */
   }
   .body__main {
     display: grid;
   }
-  .body__content > Button {
-    margin-left: 40%;
-    /* align-items: center; */
+  .body__content {
+    padding: 10px;
   }
 
   .body__content > h2 {
     padding-top: 20px;
+  }
+  .body__content p {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: justify;
   }
 }

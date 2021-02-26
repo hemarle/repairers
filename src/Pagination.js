@@ -16,7 +16,7 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
               onClick={() => {
                 paginate(number);
               }}
-              href=""
+              href="#"
             >
               {number}
             </a>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import image from "./images/imagebg.jpeg";
+import image from "./images/bible.jpg";
 import "./SermonPost.css";
 import { useParams } from "react-router-dom";
 import { useStateValue } from "./StateProvider";

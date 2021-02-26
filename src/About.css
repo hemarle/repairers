@@ -1,8 +1,8 @@
 .about {
   background-color: #f0f0f0;
   color: #555555;
-  padding-top: 150px;
-  min-height: 100vh;
+  padding-top: 10vh;
+  min-height: 90vh;
 }
 .about > h2 {
   font-weight: 400;

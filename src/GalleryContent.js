@@ -1,15 +1,15 @@
 import React from "react";
 import "./GalleryContent.css";
 
-import image from "./images/churchbg.jpg";
-function GalleryContent() {
+function GalleryContent({ image, title, date }) {
   return (
     <div className="galleryContent">
       <img src={image} />
       <div className="galleryContent__text">
-        <h3>
-          The Love Fest <span>21/02/2020</span>
-        </h3>
+        <h5>
+          {title}
+          <span>{date}</span>
+        </h5>
       </div>
     </div>
   );

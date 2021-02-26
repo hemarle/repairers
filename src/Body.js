@@ -1,51 +1,28 @@
 import React from "react";
 import "./Body.css";
-import Sermon from "./Sermon.js";
-import { Card, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import imgbg from "./images/churchbg.jpg";
+import { useStateValue } from "./StateProvider";
+
 function Body({ first }) {
+  const [{ SERMON }] = useStateValue();
   return (
     <div className="body">
       <div className="body__main">
-        <div className="body__sermon">
-          <div className="body__image">
-            <img src={imgbg} width="470px" height="220px" />
+        {SERMON.slice(0, 3).map((serm) => (
+          <div className="body__sermon">
+            <div className="body__image">
+              <img src={imgbg} width="470px" height="220px" />
+            </div>
+            <div className="body__content">
+              <h2>{serm.title}</h2>
+              <p>{serm.message.slice(0, 30)}...</p>
+              <a className="btn btn-primary" href={`/sermons/${serm._id}`}>
+                Read More
+              </a>
+            </div>
           </div>
-          <div className="body__content">
-            <h2>Joy of the Lamb</h2>
-            <p>
-              {" "}
-              Jesus is the joy of the world. We can get to know more bnuysy
-            </p>
-            <Button>Read More</Button>
-          </div>
-        </div>
-        <div className="body__sermon">
-          <div className="body__image">
-            <img src={imgbg} width="170px" height="120px" />
-          </div>
-          <div className="body__content">
-            <h2>Joy of the Lamb</h2>
-            <p>
-              {" "}
-              Jesus is the joy of the world. We can get to know more bnuysy
-            </p>
-            <Button>Read More</Button>
-          </div>
-        </div>
-        <div className="body__sermon">
-          <div className="body__image">
-            <img src={imgbg} width="170px" height="120px" />
-          </div>
-          <div className="body__content">
-            <h2>Joy of the Lamb</h2>
-            <p>
-              {" "}
-              Jesus is the joy of the world. We can get to know more bnuysy
-            </p>
-            <Button>Read More</Button>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

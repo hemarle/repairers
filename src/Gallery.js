@@ -4,18 +4,14 @@ import GalleryContent from "./GalleryContent";
 import image from "./images/churchbg.jpg";
 import { useStateValue } from "./StateProvider";
 function Gallery() {
-  const [state, dispatch] = useStateValue();
+  const [{ GALLERY }, dispatch] = useStateValue();
 
   return (
     <div className="gallery">
-      <h2>Gallery</h2>
       <div className="gallery__content">
-        <GalleryContent />
-        <GalleryContent />
-        <GalleryContent />
-        <GalleryContent />
-        <GalleryContent />
-        {console.log(state)}
+        {GALLERY.map(({ imageUrl, date, title }) => (
+          <GalleryContent image={imageUrl} date={date} title={title} />
+        ))}
       </div>
     </div>
   );
